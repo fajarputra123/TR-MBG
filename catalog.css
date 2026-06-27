@@ -1,0 +1,344 @@
+/* Layout Utama Katalog */
+.catalog-container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.catalog-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 20px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.breadcrumb a {
+    color: #777;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #3A2D28;
+    font-weight: 600;
+}
+
+.title-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-sort h1 {
+    font-size: 32px;
+    color: #3A2D28;
+}
+
+/* ============================
+   Custom Dropdown (Sesuai Desain)
+============================ */
+.custom-dropdown {
+    position: relative;
+    width: 220px;
+    font-size: 16px;
+    color: #3A2D28;
+}
+
+.dropdown-selected {
+    padding: 10px 15px;
+    background: #fff;
+    border: 1.5px solid #D6D3CC;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.dropdown-selected span {
+    font-weight: 400;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1.5px solid #D6D3CC;
+    border-radius: 8px;
+    list-style: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none; /* Disembunyikan secara default, dimunculkan lewat JS */
+    z-index: 10;
+}
+
+.dropdown-options.show {
+    display: block;
+}
+
+.dropdown-options li {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: 0.2s;
+}
+
+.dropdown-options li:hover {
+    background: #f9f9f9;
+    color: #4F6F52;
+}
+
+.dropdown-options li:last-child {
+    border-bottom: none;
+}
+
+/* ============================
+Grid Layout (Sidebar & Main)
+============================ */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr; 
+    gap: 40px;
+    align-items: start;
+}
+
+/* Sidebar Filter */
+.sidebar-filter {
+    background: #fafafa;
+    padding: 25px 20px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+}
+
+.sidebar-filter h3 {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #3A2D28;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* ============================
+   Custom Checkbox (Centang Hijau)
+============================ */
+.custom-checkbox {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px ;
+    color: #5C524B;
+}
+
+.custom-checkbox input {
+    display: none; /* Sembunyikan checkbox asli bawaan browser */
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D6D3CC;
+    border-radius: 4px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+
+/* Saat checkbox diklik (kondisi checked) */
+.custom-checkbox input:checked + .checkmark {
+    background-color: #4F6F52; /* Warna hijau NexBook */
+    border-color: #4F6F52;
+}
+
+/* Memunculkan icon centang putih saat checked */
+.custom-checkbox input:checked + .checkmark::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: white;
+    font-size: 12px;
+}
+
+/* ============================
+   Book Card Layout
+============================ */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 25px;
+}
+
+.book-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    font-family: 'Segoe UI', sans-serif; /* Memaksa font menjadi Segoe UI */
+}
+
+.stretched-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Membuat link berada di atas gambar dan teks */
+}
+
+.book-title {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 20px !important; 
+    font-weight: 700 !important;
+    color: #3A2D28;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.add-cart-btn {
+    position: relative;
+    z-index: 2; /* Diatur ke angka 2 agar posisinya di atas link dan tetap bisa diklik bebas */
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #4F6F52;
+    background: #fff;
+    color: #4F6F52;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.book-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.book-title {
+    font-size: 16px;
+    color: #3A2D28;
+    margin-bottom: 5px;
+}
+
+.book-author {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 14px !important;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price {
+    font-family: 'Segoe UI', sans-serif !important;
+    display: block;
+    font-weight: 700 !important;
+    color: #4F6F52;
+    font-size: 18px !important; 
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 13px !important;
+    color: #666;
+}
+
+.rating i {
+    color: #F4C150; /* Warna bintang kuning */
+}
+
+.add-cart-btn {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #4F6F52;
+    background: #fff;
+    color: #4F6F52;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: #4F6F52;
+    color: #fff;
+}
+
+/* ============================
+   Pagination
+============================ */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D6D3CC;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: 0.3s;
+}
+
+.pagination button.active, .pagination button:hover {
+    background: #4F6F52;
+    color: #fff;
+    border-color: #4F6F52;
+}
+
+/* ============================
+   Responsive untuk Layar Kecil
+============================ */
+@media(max-width: 1200px) {
+    .book-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media(max-width: 900px) {
+    .catalog-layout {
+        grid-template-columns: 1fr; /* Sidebar pindah ke atas pada layar HP/Tablet */
+    }
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+

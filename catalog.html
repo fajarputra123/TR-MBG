@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBook - Catalog</title>
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="NexBook Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="catalog.html" style="color: #4F6F52;">Catalog</a></li>
+            <li><a href="#">Best Seller</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cari buku favoritmu...">
+        </div>
+        <div class="nav-icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </nav>
+</header>
+
+<main class="catalog-container fade">
+    <div class="catalog-header">
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <a href="#">Catalog</a> &gt; <span>Semua Buku</span>
+        </div>
+        <div class="title-sort">
+            <h1>Semua Buku</h1>
+            
+            <div class="custom-dropdown">
+                <div class="dropdown-selected">
+                    Urutkan: <span>Terbaru</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <ul class="dropdown-options">
+                    <li class="active">Terbaru</li>
+                    <li>Terlama</li>
+                    <li>Harga Tertinggi</li>
+                    <li>Harga Terendah</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalog-layout">
+        <aside class="sidebar-filter">
+            <h3>FILTER</h3>
+            
+            <div class="filter-group">
+                <h4>KATEGORI</h4>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Fiksi
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Non-fiksi
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Bisnis
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Lainnya..
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h4>BAHASA</h4>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Indonesia
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Inggris
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Lainnya..
+                </label>
+            </div>
+        </aside>
+
+        <section class="book-grid">
+            
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Deep Work">
+                <div class="card-body">
+                    <h4 class="book-title">Deep Work</h4>
+                    <p class="book-author">Cal Newport</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 78.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Putri Terakhir">
+                <div class="card-body">
+                    <h4 class="book-title">Putri Terakhir</h4>
+                    <p class="book-author">Elvira Mahardika</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 88.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+    <a href="detail.html" class="stretched-link"></a>
+    
+    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Sang Eksekutor">
+    <div class="card-body">
+        <h4 class="book-title">Sang Eksekutor</h4>
+        <p class="book-author">Tere Liye</p>
+        <div class="card-footer">
+            <div class="price-rating">
+                <span class="price">Rp 98.100</span>
+                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+    </div>
+</div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Highly Effective">
+                <div class="card-body">
+                    <h4 class="book-title">Highly Effective</h4>
+                    <p class="book-author">Stephen R. Covey</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 98.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Gerimis Pagi">
+                <div class="card-body">
+                    <h4 class="book-title">Gerimis Pagi</h4>
+                    <p class="book-author">Ketut Susilo</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 90.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Kebiasaan Kecil">
+                <div class="card-body">
+                    <h4 class="book-title">Kebiasaan kecil</h4>
+                    <p class="book-author">James Clear</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 58.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Atomic Habits">
+                <div class="card-body">
+                    <h4 class="book-title">Atomic Habits</h4>
+                    <p class="book-author">James Clear</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 98.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Mindful">
+                <div class="card-body">
+                    <h4 class="book-title">Mindful</h4>
+                    <p class="book-author">Andreas Wijaya</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 68.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Pulang">
+                <div class="card-body">
+                    <h4 class="book-title">Pulang</h4>
+                    <p class="book-author">Tere Liye</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 92.300</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500" alt="Dunia Anna">
+                <div class="card-body">
+                    <h4 class="book-title">Dunia Anna</h4>
+                    <p class="book-author">Jostein Gaarder</p>
+                    <div class="card-footer">
+                        <div class="price-rating">
+                            <span class="price">Rp 85.000</span>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="pagination">
+        <button><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="active">1</button>
+        <button>2</button>
+        <span>...</span>
+        <button>9</button>
+        <button>10</button>
+        <button><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>NexBook</h3>
+            <p>Tempat menemukan buku favoritmu dengan pengalaman membaca modern.</p>
+        </div>
+        <div>
+            <h4>Explore</h4>
+            <ul>
+                <li>Home</li>
+                <li>Catalog</li>
+                <li>Best Seller</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Bantuan</h4>
+            <ul>
+                <li>Cara Belanja</li>
+                <li>Pengiriman</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+    </div>
+    <p class="copyright">©2026 NexBook. All Rights Reserved.</p>
+</footer>
+
+<script src="detail.js"></script>
+<script src="catalog.js"></script>
+</body>
+</html>
