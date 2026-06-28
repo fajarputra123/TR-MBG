@@ -234,8 +234,10 @@ Grid Layout (Sidebar & Main)
 
 .book-card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 280px; /* Tingginya sedikit kita kurangi agar lebih proporsional */
+    object-fit: contain; /* Ini kuncinya! Memaksa seluruh gambar masuk tanpa di-crop */
+    padding-top: 15px; /* Memberikan sedikit jarak di atas agar tidak terlalu mepet */
+    background-color: #fff; /* Memastikan background di belakang gambar tetap putih */
 }
 
 .card-body {
